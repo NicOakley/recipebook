@@ -1,0 +1,10 @@
+[
+    {
+        "recipe_id": "1",
+        "recipe_name": "Chocolate Chip Cookies",
+        "desc": "cookies with lots of chocolate chips",
+        "ingredients": "'2 eggs' 'butter' 'flour'",
+        "directions":"",
+        "image": ""
+    }
+]
