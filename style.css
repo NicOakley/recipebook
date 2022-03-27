@@ -4,6 +4,7 @@ html, body, .container {
 
 body{
     font-family: 'Pacifico';
+    overflow-x:hidden;
 }
 
 .search-bar{
@@ -111,11 +112,14 @@ a:hover{
 }
 
 .page-content{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin:15px;
     border-radius: 15px;;
     background: #B08D74;
     height: 650px
 }
+
+
 
 .recipe-name{
     padding-top: 22px;
@@ -124,6 +128,10 @@ a:hover{
     font-size: 42px;
     color:#e9e0d7;
     text-shadow: -1.5px -1.5px 0 #1E1E1E, 1.5px -1.5px 0 #1E1E1E, -1.5px 1.5px 0 #1E1E1E, 1.5px 1.5px 0 #1E1E1E;
+}
+
+.delete-id{
+    min-width: 200px;
 }
 
 
@@ -173,6 +181,14 @@ a:hover{
     }
     #page.coil {
         display:none;
+    }
+
+    .delete-id{
+        min-width: 100px;
+    }
+
+    .delete-container{
+        margin-bottom: 50px;
     }
 
     
