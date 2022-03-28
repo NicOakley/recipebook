@@ -26,8 +26,9 @@
         <!-- create container, inside create input fields for adding recipes to the cookbook -->
         <div class="container d-flex mt-5" style="max-width: 800px;">
             <div class="container-fluid col-12 mt-5" id="page">
-                <div role="button" class="button page-content text-left">
+                <div class="page-content text-left" style="padding-bottom: 670px;">
                     <h1 class="text-center" style="padding-top:20px;">Add Recipe</h1>
+                    
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-12">
@@ -40,36 +41,46 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="recipe-description">Recipe Description</label>
-                                    <textarea class="form-control" id="recipe-description" rows="3" style="resize:none;"></textarea>
+                                    <label for="recipe-description">Description</label>
+                                    <textarea class="form-control" id="recipe-description" rows="1" style="resize:none;" placeholder="Description"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="recipe-ingredients">Recipe Ingredients</label>
-                                    <textarea class="form-control" id="recipe-ingredients" rows="3" style="resize:none;"></textarea>
+                                    <label for="recipe-ingredients">Ingredients</label>
+                                    <textarea class="form-control" id="recipe-ingredients" rows="2" style="resize:none;" placeholder="Ingredients"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="recipe-instructions">Recipe Instructions</label>
-                                    <textarea class="form-control" id="recipe-instructions" rows="3" style="resize:none;"></textarea>
+                                    <label for="recipe-instructions">Instructions</label>
+                                    <textarea class="form-control" id="recipe-instructions" rows="3" style="resize:none;" placeholder="Instructions"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="recipe-image">Recipe Image</label>
+                                    <label for="recipe-image">Image</label>
                                     <input type="text" class="form-control" id="recipe-image" placeholder="Enter recipe image">
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="recipe-notes">Notes</label>
+                                    <input type="text" class="form-control" id="recipe-category" placeholder="Enter recipe notes">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
+                    
                 </div>
                 <div class="col-sm-12 mt-5">
                     <button onclick="addRecipe()" type="button" class="btn btn-lg btn-block" id="add-recipe" style="background: #836148; outline: 2px solid black;">Add Recipe</button>
@@ -82,8 +93,6 @@
                 </div>
             </div>
         </div>
-
-
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
