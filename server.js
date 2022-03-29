@@ -33,6 +33,17 @@ app.get('/api/recipes/:recipe_id', (req, res) => {
     });
 });
 
+//POST a new recipe
+app.post('/api/recipes', (req, res) => {
+    var recipe = req.body;
+    recipe_collection.insertOne(recipe, (error, result) => {
+        if(error) {
+            return res.status(500).send(error);
+        }
+        res.send(result);
+    });
+}); 
+
 
 
 app.listen(5000, () => {
