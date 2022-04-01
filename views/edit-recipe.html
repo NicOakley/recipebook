@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x:hidden;">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="nic's cookbook"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+        <link rel="stylesheet" href="/styles/style.css">
+        <script defer src="/scripts/edit.js"></script>
+        <title>Recipe Book</title>
+    </head>
+
+    <body style="background:#407E99; margin-top: 15px;">
+        <nav class="nav justify-content-center col-12">
+            <a class="nav-link active" href="/views/index.html">
+                <svg id="back-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+            </a>
+            <a href="/views/index.html">
+                <h1 id="" class="heading all-recipes">Nic's Recipe Book</h1>
+            </a>
+        </nav>
+
+        <!-- create container, inside create input fields for adding recipes to the cookbook -->
+        <div class="container d-flex mt-5" style="max-width: 800px;">
+            <div class="container-fluid col-12 mt-5" id="page">
+                <div class="page-content text-left" style="padding-bottom: 670px;">
+                    <h1 class="text-center heading" style="padding-top:20px; font-size: 40px; padding-bottom: 20px; color: white;">Add/Edit Recipe</h1>
+                    <div class="container-fluid">
+                        <div class="container p-0 m-0 d-flex">
+                            <div class="m-0 p-0 row col-4">
+                                <div>
+                                    <div class="form-group">
+                                        <label for="recipe-id">Recipe ID</label>
+                                        <input type="text" class="form-control" id="recipe-id" placeholder="Enter recipe ID">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row col-12">
+                                <div>
+                                    <div class="form-group">
+                                        <label for="recipe-name">Recipe Name</label>
+                                        <input style="max-width: 168px;"  type="text" class="form-control" id="recipe-name" placeholder="Enter recipe name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="recipe-description">Description</label>
+                                    <textarea class="form-control" id="recipe-description" rows="1" style="resize:none;" placeholder="Description"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="recipe-ingredients">Ingredients</label>
+                                    <textarea class="form-control" id="recipe-ingredients" rows="2" style="resize:none;" placeholder="Ingredients"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="recipe-instructions">Instructions</label>
+                                    <textarea class="form-control" id="recipe-instructions" rows="3" style="resize:none;" placeholder="Instructions"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="recipe-image">Image</label>
+                                    <input type="text" class="form-control" id="recipe-image" placeholder="Enter recipe image url">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="recipe-notes">Notes</label>
+                                    <input type="text" class="form-control" id="recipe-notes" placeholder="Enter recipe notes">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- button to add recipe -->
+                <div class="col-sm-12 mt-5">
+                    <button onclick="addRecipe()" type="button" class="btn btn-lg btn-block" id="add-recipe">Add Recipe</button>
+                </div>
+
+                 <!-- button to edit recipe -->
+                 <div class="col-sm-12 mt-5">
+                    <button type="button" class="btn btn-lg btn-block" id="edit-recipe">Edit Recipe</button>
+                </div>
+
+                <!-- button to delete recipe by id -->
+                <div class="mt-5 d-flex align-items-center delete-container">
+                    <button type="button" class="col-8 btn btn-lg btn-block" id="delete-recipe" style="">Delete Recipe by ID</button>
+                    <input type="text" class="form-control col-2 delete-id" placeholder="ID" id="delete-recipe-id">
+                </div>
+            </div>
+        </div>
+        <footer style="height:400px;">
+            <div class="footer-content text-center" style="margin-top: 120px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+            </div>
+        </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
