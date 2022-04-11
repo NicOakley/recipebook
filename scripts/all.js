@@ -10,7 +10,7 @@ $(document).ready(function() {
     });
     //last page
     $('#content-1').click(function (e) { 
-        lPage();
+        previousPage();
     });
 
 function getRecipe(id) {
@@ -18,13 +18,16 @@ function getRecipe(id) {
 
         //check if get is successful
         if(data.length > 0){
-        
-
         //iterate over the JSON response, building an HTML string
         var left_content_string = "";
         var right_content_string = "";
+        var image = true;
 
         $(data).each(function(key, object) {
+            //if the recipe has no image url, set image to false
+            if(object['image'] == '' || object['image'] == null){
+                image = false;
+            }
             //build the left_content_string for the left page
             //title
             left_content_string += "<h2 style='font-family: pacifico;' class='recipe-name'>"+object['recipe_name']+"</h2>";
@@ -33,10 +36,13 @@ function getRecipe(id) {
             //ingredients
             left_content_string += "<h5 class='mt-4 mb-2 ml-5 text-left'>Ingredients</h5><div class='text-left ml-5' style='min-height: 80px; max-width:200px;'>"+ object['ingredients'] + "</div>";
             //image
+            if( image == true)
             left_content_string += "<img class='img-fluid mt-4 rounded' style='max-height: 250px; min-height:250px; outline: 2px solid #836148; opacity: 80%;' src='"+object['image']+"'>";
 
             //build the right_content_string for the right page
+            //directions
             right_content_string += "<h5 class='mt-4 mb-2 ml-5 text-left'>Directions </h5><p class='text-left ml-5'>"+ object['directions'] +"</p>";
+            //Notes
             right_content_string += "<h5 class='mt-4 mb-2 ml-5 text-left'>Notes </h5><p class='text-left ml-5' style='font-size: 14px;'>"+ object['notes'] +"</p>";
         });
 
@@ -60,13 +66,11 @@ function nextPage(){
     }
 }
 
-function lPage(){
+function previousPage(){
     if(pagenum != 1){
         pagenum--;
         getRecipe(pagenum);
         console.log("pagenum: "+pagenum);
         console.log("lastPage: "+lastPage);
     }
-
-
 }

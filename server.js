@@ -68,9 +68,6 @@ app.put('/api/recipes/:recipe_id', (req, res) => {
     });
 });
 
-
-
-
 app.listen(5000, () => {
     MongoClient.connect(CONNECTION_URL, { useNewUrlParser: true }, (error, client) => {
         if(error) {
